@@ -1,4 +1,6 @@
 app_name: "Mini DevOps Application"
-app_message: "Ansible deployment is successful!"
+app_message: "Ansible handler test successful!"
+
+
 
 

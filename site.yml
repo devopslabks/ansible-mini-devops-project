@@ -1,0 +1,21 @@
+- name: Mini Ansible Project
+  hosts: local
+  vars_files:
+    - vars.yml
+
+  tasks:
+    - name: Create DevOps configuration from template
+      template:
+        src: templates/devops.txt.j2
+        dest: /tmp/devops.txt
+
+    - name: Show application name
+      debug:
+        msg: "{{ app_name }} is deployed successfully"
+
+    - name: Make sure Nginx is running
+      service:
+        name: nginx
+        state: started
+
+
